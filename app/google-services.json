@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "973843865472",
+    "firebase_url": "https://trackem-hack.firebaseio.com",
+    "project_id": "trackem-hack",
+    "storage_bucket": "trackem-hack.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:973843865472:android:169b837be4ed9183",
+        "android_client_info": {
+          "package_name": "com.zuccessful.trackem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "973843865472-c3guagdkn90jnh33c2k8atb8mgrgl4jn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpEbWEATitIzhCD8lte3IfkFMGNQI3ARY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
