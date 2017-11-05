@@ -11,10 +11,13 @@ import android.widget.Toast;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.hypertrack.lib.HyperTrack;
 import com.hypertrack.lib.HyperTrackMapFragment;
 import com.hypertrack.lib.MapFragmentCallback;
 import com.hypertrack.lib.models.Action;
+import com.hypertrack.lib.models.HyperTrackLocation;
+import com.hypertrack.lib.models.User;
 
 import java.util.List;
 
@@ -40,7 +43,23 @@ public class TrackingActivity extends AppCompatActivity {
         @Override
         public void onMapReadyCallback(HyperTrackMapFragment hyperTrackMapFragment, GoogleMap map) {
             Toast.makeText(context, "On Map Ready callback", Toast.LENGTH_SHORT).show();
-            hyperTrackMapFragment.startPulse(true, MainActivity.getUsers().get(0).getId());
+            for (User u : MainActivity.getUsers()) {
+                hyperTrackMapFragment.startPulse(true, u.getId());
+                MarkerOptions m = new MarkerOptions();
+                HyperTrackLocation hl = u.getLastLocation();
+//            MainActivity.getUsers().get(0).getLastLocation()
+                if(hl != null) {
+                    m.position(hl.getLatLng());
+                    hyperTrackMapFragment.addCustomMarker(m);
+                }
+
+            }
+//            hyperTrackMapFragment.startPulse(true, MainActivity.getUsers().get(0).getId());
+//            MarkerOptions m = new MarkerOptions();
+//            HyperTrackLocation hl = MainActivity.getUsers().get(0).getLastLocation();
+////            MainActivity.getUsers().get(0).getLastLocation()
+//            m.position(hl.getLatLng());
+//            hyperTrackMapFragment.addCustomMarker(m);
             super.onMapReadyCallback(hyperTrackMapFragment, map);
         }
 

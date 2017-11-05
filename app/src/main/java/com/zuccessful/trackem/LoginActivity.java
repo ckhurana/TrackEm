@@ -20,6 +20,7 @@ import com.hypertrack.lib.HyperTrack;
 import com.hypertrack.lib.callbacks.HyperTrackCallback;
 import com.hypertrack.lib.internal.common.util.HTTextUtils;
 import com.hypertrack.lib.models.ErrorResponse;
+import com.hypertrack.lib.models.HyperTrackLocation;
 import com.hypertrack.lib.models.SuccessResponse;
 import com.hypertrack.lib.models.User;
 import com.hypertrack.lib.models.UserParams;
@@ -47,6 +48,7 @@ public class LoginActivity extends AppCompatActivity {
 
         // Initialize UI Views
         initUIViews();
+
     }
 
     /**
